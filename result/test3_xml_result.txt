@@ -1,0 +1,65 @@
+
+PMID : 32949966
+
+(25%), (MGH), (COVID-19), 2019 
+(within a safe limit) ==> 4 words
+
+Neurosurgical services in the Northern Zone of Sarawak in Malaysia: The way forward amid COVID-19 pandemic. (16)
+BACKGROUND: The novel coronavirus disease 2019 (COVID-19) pandemic has set a huge challenge to the delivery of neurosurgical services including the transfer of patients. (24) 
+We aimed to share our strategy in handling neurosurgical emergencies at a remote center in Borneo Island. (17)
+Our objectives included discussing the logistic and geographical challenges faced during the COVID-19 pandemic. (14)
+
+METHODS: Miri General Hospital (MGH) is a remote center in Sarawak, Malaysia, serving a population with difficult access to neurosurgical services. (21)
+Two neurosurgeons were stationed here on a rotational basis every fortnight during the pandemic to handle neurosurgical cases. (18)
+Patients were triaged depending on their urgent needs for surgery or transfer to a neurosurgical center and managed accordingly. (19)
+All patients were screened for potential risk of contracting COVID-19 prior to the surgery.  (14)
+Based on this, the level of personal protective equipment required for the healthcare workers involved was determined. (17)
+
+RESULTS: During the initial six weeks of the Movement Control Order (MCO) in Malaysia, there were 50 urgent neurosurgical consultations. (20)
+Twenty patients (40%) required emergency surgery or intervention. (8)
+There were nine vascular (45%), five trauma (25%), four tumor (15%), and two infection cases (10%).  (16)
+Eighteen patients were operated at MGH, among whom 17 (94.4%) survived. (11)
+Ninety percent of anticipated transfers were avoided. (7)
+None of the medical staff acquired COVID-19. (7)
+
+CONCLUSIONS: This framework allowed timely intervention for neurosurgical emergencies (within a safe limit), 
+minimized transfer, and enabled uninterrupted neurosurgical services at a remote center with difficult access to neurosurgical care during a pandemic. (33)
+
+Characters : 1840
+Words : 262
+Sentences : 16
+
+=====================================================
+PMID : 32949777
+
+>28,000, 10-June, 68%, 10.6%, >28,000
+
+COVID-19 Infection Among Healthcare Workers in a National Healthcare System: the Qatar Experience. (13)
+BACKGROUND: Our aim was to determine the prevalence of COVID-19 infection in healthcare workers (HCW) in a national healthcare system and to understand the risk factors for infection. (28)
+
+METHODS: The study was conducted at Hamad Medical Corporation in Qatar, a national healthcare system with 14 hospitals and >28,000 employees, between March 10-June 24, 2020. (27x) (26)
+Data on COVID-19+ HCW were retrieved from the electronic health records and employment records, followed by an email survey and a focused telephone interview. (24)
+
+RESULTS: Among 16,912 HCW tested, 10.6% tested positive. (9x) (8)
+Hospitalization rate was 11.6%, 1.3% required supplemental oxygen, 0.6% needed intensive care unit admission and 0.3% required mechanical ventilation. (19)
+There were no deaths.  (4)
+In a follow-up survey of 393 HCW, 5% reported acquiring infection at a COVID-19-designated facility and 95% at a non-COVID-19 facility having acquired the infection through accidental exposure to a colleague (45%) or a patient (29%). (36)       
+Full PPE adherence was 82% at COVID-19-designated but only 68% at non-COVID-19 facilities. (13)
+
+CONCLUSIONS: COVID-19 infection among HCW often occurs among those not directly working with COVID-19 patients. (15)
+PPE use is less stringent in such settings. (8)
+Risk of exposure and need for strict PPE must be stressed upon all HCW in all settings.(17)
+
+Characters : 1410
+Words : 211
+Sentences : 12
+
+
+=======================================================
+PMID : 32949775
+
+Destructive pulmonary fibrosis after severe COVID-19 pneumonia.(7)
+
+Characters : 63
+Words : 7
+Sentences : 1
