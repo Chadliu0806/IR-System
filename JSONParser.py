@@ -13,6 +13,7 @@ def tweets_parser(tweet, pattern):
     global nWords
     global nSentences
     
+    # Only process tweet content which property name is "tweet_text"
     vtweet.append(tweet['tweet_text'])
 
     getMatch(pattern, str(vtweet[0]))

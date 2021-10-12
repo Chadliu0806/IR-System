@@ -8,12 +8,13 @@ search_pattern = ''
 
 if __name__ == '__main__':
 
+    # Step1. Input search string
     root = tk.Tk()
     root.geometry("400x80")
 
     def getTextInput():
         global search_pattern
-        search_pattern = edit.get(1.0, tk.END+"-1c")
+        search_pattern = edit.get(1.0, tk.END+"-1c")    # erase \n character
        
     edit=tk.Text(root, height=2)
     edit.pack()
@@ -21,7 +22,7 @@ if __name__ == '__main__':
     btnInput.pack()
     root.mainloop()
 
-  
+    # Step2. Select parser file 
     file_path = filedialog.askopenfilename(initialdir='D:\\',title = "Select Packet Capture File!",
                                            filetypes = (("All","*.XML *.JSON"),("XML files","*.xml"),("JSON files","*.json")))
     

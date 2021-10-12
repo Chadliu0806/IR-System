@@ -7,29 +7,30 @@ def XMLParser(filename, pattern):
     nWords = 0
     nSentences = 0
     nPage = 1
-    
-        
+            
     XMLtree = ET.parse(filename)
     root = XMLtree.getroot()
-
+    # Only process title and abstract content
     for page in root.findall('./PubmedArticle'):
         print (page.tag, page.attrib)
         for node in page.findall('.//Article'):
 
-            szTitle = node.find('./ArticleTitle').text
             nChars = 0
             nWords = 0
             nSentences = 0
 
-            sz = 'Article Title:' + str(nPage) + '-' + szTitle
-            #print(sz)
-            getMatch(pattern, szTitle)
-            nChars += getChars(szTitle)
-            nWords += getWords(szTitle)
-            nSentences += getSentences(szTitle)
+            titlenode = node.findtext('./ArticleTitle')
+            if (titlenode):
+                szTitle = titlenode.title()
+                sz = 'Article Title:' + str(nPage) + '-' + szTitle
+                #print(sz)
+                getMatch(pattern, szTitle)
+                nChars += getChars(szTitle)
+                nWords += getWords(szTitle)
+                nSentences += getSentences(szTitle)
             for nextnode in node.iter(tag='AbstractText'):
                 line = ''
-                if nextnode.attrib != {}:
+                if nextnode.attrib != {}:   # This tag contain the attribute content
                     line = nextnode.attrib['Label'] + ': '
                     
                 line = line + ''.join(nextnode.itertext())
@@ -39,7 +40,6 @@ def XMLParser(filename, pattern):
                 getMatch(pattern, line)
             #print(line)
             
-
             sz = 'Article' + str(nPage) + ' - ' + 'The number of characters in \'XML contents\':' + str(nChars)
             print(sz)
             sz = 'Article' + str(nPage) + ' - ' + 'The number of words in \'XML contents\':' + str(nWords)
