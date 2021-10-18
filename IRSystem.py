@@ -12,6 +12,7 @@ search_pattern = ''
 
 if __name__ == '__main__':
 
+    os.system("")
     
     type = int(input("1. Information Retrieval\n2. Contents Compare.\nPlease select the above of the functions : "))
 
