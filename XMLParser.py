@@ -7,7 +7,8 @@ def XMLParser(filename, pattern):
     nWords = 0
     nSentences = 0
     nPage = 1
-            
+    contents = ''
+
     XMLtree = ET.parse(filename)
     root = XMLtree.getroot()
     # Only process title and abstract content
@@ -34,11 +35,13 @@ def XMLParser(filename, pattern):
                     line = nextnode.attrib['Label'] + ': '
                     
                 line = line + ''.join(nextnode.itertext())
+                contents = contents + line
                 nChars += getChars(line)
                 nWords += getWords(line)
                 nSentences += getSentences(line)
-                getMatch(pattern, line)
-            #print(line)
+                if (pattern != ''):
+                    getMatch(pattern, line)
+                #print(line)
             
             sz = 'Article' + str(nPage) + ' - ' + 'The number of characters in \'XML contents\':' + str(nChars)
             print(sz)
@@ -49,5 +52,6 @@ def XMLParser(filename, pattern):
 
         print ('\n')
         nPage += 1
+    return contents
         
     

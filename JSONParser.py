@@ -12,11 +12,13 @@ def tweets_parser(tweet, pattern):
     global nChars
     global nWords
     global nSentences
-    
+   
+
     # Only process tweet content which property name is "tweet_text"
     vtweet.append(tweet['tweet_text'])
 
-    getMatch(pattern, str(vtweet[0]))
+    if (pattern != ''):
+        getMatch(pattern, str(vtweet[0]))
     count = getChars(vtweet[0])
     nChars += count
     print('The number of characters in \'tweet_text\':', count)
@@ -29,13 +31,13 @@ def tweets_parser(tweet, pattern):
     nSentences += count
     print('The number of sentences in \'tweet_text\':', count)
     print('\n')
+    contents = str(vtweet[0])
     
     
 def JSONParser(filename, pattern):
 
-    tweet_arrty = []
-    
     ntweet = 1
+    global contents
 
     with open(filename, encoding='UTF-8') as f:
         buf = json.load(f)
@@ -51,4 +53,4 @@ def JSONParser(filename, pattern):
         print('The total number of characters :', nChars)
         print('The total number of words :', nWords)
         print('The total number of sentences :', nSentences)
-
+           
