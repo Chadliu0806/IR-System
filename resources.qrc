@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="IR-System">
+    <file>resource/IRSystem-icon.png</file>
+    <file>resource/Stemming-icon.png</file>
+    <file>resource/stopwords-icon.png</file>
+    <file>resource/PartialSearch-icon.png</file>
+    <file>resource/IgnoreCase-icon.png</file>
+    <file>resource/Play-icon.png</file>
+    <file>resource/Search-icon.png</file>
+  </qresource>
+</RCC>

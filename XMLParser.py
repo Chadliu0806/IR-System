@@ -25,7 +25,8 @@ def XMLParser(filename, pattern):
                 szTitle = titlenode.title()
                 sz = 'Article Title:' + str(nPage) + '-' + szTitle
                 #print(sz)
-                getMatch(pattern, szTitle)
+                if (pattern != ''):
+                    getMatch(pattern, szTitle)
                 nChars += getChars(szTitle)
                 nWords += getWords(szTitle)
                 nSentences += getSentences(szTitle)

@@ -1,5 +1,7 @@
 import re
 
+frequency = {}
+
 def getChars(sz):
     nChars = 0
     for ch in sz:
@@ -8,7 +10,9 @@ def getChars(sz):
     return nChars
 
 def getWords(sz):
-    return len((sz.encode(encoding='ascii', errors='ignore')).split())
+    word_string = sz.encode(encoding='ascii', errors='ignore').split()
+    amount = len(word_string)
+    return amount
 
 def getSentences(sz):
     # regular expression string come from network paper

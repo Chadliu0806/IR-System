@@ -26,7 +26,6 @@ def Comparison(source, target):
     target_len = len(target)
     
     record = []
-    
     if (source_len == 0 or target_len ==0):
         return False
     elif (source_len != target_len):
@@ -38,11 +37,10 @@ def Comparison(source, target):
         while (i < source_len):
             if (source[i] != target[i]):
                 record.append({i, source[i]})
-                print('\033[1;31;47m' + target[i] + '\033[0m', end = "")
+                print('\033[43;31;1m' + target[i] + '\033[0m', end = "")
             else:
                 print(target[i], end = '')
             i = i + 1   
-
         if (len(record) != 0):
             print('\nIncorrect Position:')
             print(record)

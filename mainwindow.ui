@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>661</width>
+    <height>601</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>661</width>
+    <height>601</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>IR-System</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/IR-System/resource/IRSystem-icon.png</normaloff>:/IR-System/resource/IRSystem-icon.png</iconset>
+  </property>
+  <widget class="QComboBox" name="func_comboBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>341</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="currentText">
+    <string>Information Retrieval</string>
+   </property>
+   <property name="duplicatesEnabled">
+    <bool>false</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>Information Retrieval</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Contents Compare</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Zipf Distribution</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Matching</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Edit Distance</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>16</y>
+     <width>291</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pelease select perform function</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="file_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Information Retrieval</string>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="file_progressBar">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>381</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>24</number>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="Index_tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>641</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <column>
+    <property name="text">
+     <string>Word</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignLeading|AlignVCenter</set>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Document</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignLeading|AlignVCenter</set>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Rows</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignLeading|AlignVCenter</set>
+    </property>
+   </column>
+  </widget>
+  <widget class="QSpinBox" name="file_spinBox">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>40</y>
+     <width>71</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="accelerated">
+    <bool>true</bool>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>1000</number>
+   </property>
+   <property name="value">
+    <number>25</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>40</y>
+     <width>90</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Amount of Files</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Stemming_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>90</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Porter Stemming</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/IR-System/resource/Stemming-icon.png</normaloff>:/IR-System/resource/Stemming-icon.png</iconset>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Stopwords_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>90</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Stopwords</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/IR-System/resource/stopwords-icon.png</normaloff>:/IR-System/resource/stopwords-icon.png</iconset>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="file_label_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>120</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="file_label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>450</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Matching :</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="Match_tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>480</y>
+     <width>641</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <column>
+    <property name="text">
+     <string>Word</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignLeading|AlignVCenter</set>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Document</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignLeading|AlignVCenter</set>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Rows</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignLeading|AlignVCenter</set>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLineEdit" name="Match_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>450</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>COVID-19</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="search_pushButton">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>450</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/IR-System/resource/Search-icon.png</normaloff>:/IR-System/resource/Search-icon.png</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="perform_pushButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>40</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Perform</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/IR-System/resource/Play-icon.png</normaloff>:/IR-System/resource/Play-icon.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Partial_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>450</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Partial matching</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/IR-System/resource/PartialSearch-icon.png</normaloff>:/IR-System/resource/PartialSearch-icon.png</iconset>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="IgnoreCase_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>450</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Ignore case</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/IR-System/resource/IgnoreCase-icon.png</normaloff>:/IR-System/resource/IgnoreCase-icon.png</iconset>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>53</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Index</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>func_comboBox</tabstop>
+  <tabstop>file_spinBox</tabstop>
+  <tabstop>Stemming_checkBox</tabstop>
+  <tabstop>Stopwords_checkBox</tabstop>
+  <tabstop>Index_tableWidget</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
