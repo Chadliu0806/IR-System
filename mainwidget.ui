@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>779</width>
+    <width>782</width>
     <height>638</height>
    </rect>
   </property>
@@ -227,7 +227,7 @@
     <rect>
      <x>10</x>
      <y>150</y>
-     <width>761</width>
+     <width>771</width>
      <height>481</height>
     </rect>
    </property>
@@ -244,9 +244,9 @@
     <widget class="QTableWidget" name="Index_tableWidget">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>5</x>
        <y>10</y>
-       <width>741</width>
+       <width>121</width>
        <height>291</height>
       </rect>
      </property>
@@ -256,22 +256,6 @@
      <column>
       <property name="text">
        <string>Word</string>
-      </property>
-      <property name="textAlignment">
-       <set>AlignLeading|AlignVCenter</set>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Document</string>
-      </property>
-      <property name="textAlignment">
-       <set>AlignLeading|AlignVCenter</set>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Rows</string>
       </property>
       <property name="textAlignment">
        <set>AlignLeading|AlignVCenter</set>
@@ -379,6 +363,9 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
+     <property name="gridStyle">
+      <enum>Qt::SolidLine</enum>
+     </property>
      <column>
       <property name="text">
        <string>Word</string>
@@ -404,6 +391,19 @@
       </property>
      </column>
     </widget>
+    <widget class="QLabel" name="Zipf_label">
+     <property name="geometry">
+      <rect>
+       <x>136</x>
+       <y>10</y>
+       <width>621</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="Word2Vect_tab">
     <attribute name="title">
@@ -414,7 +414,7 @@
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>741</width>
+       <width>751</width>
        <height>471</height>
       </rect>
      </property>
@@ -623,15 +623,15 @@
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
-     <string>TF-IDF</string>
+     <string>Weighting</string>
     </attribute>
     <widget class="QTableWidget" name="TFIDF_tableWidget">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>10</y>
-       <width>751</width>
-       <height>441</height>
+       <x>230</x>
+       <y>40</y>
+       <width>531</width>
+       <height>221</height>
       </rect>
      </property>
      <property name="frameShadow">
@@ -769,177 +769,581 @@
       <property name="text">
        <string>Doc16</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc17</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc18</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc19</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc20</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc21</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc22</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc23</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc24</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc25</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc26</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc27</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc28</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc29</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc30</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc31</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc32</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc33</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc34</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc35</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc36</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc37</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc38</string>
       </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Doc39</string>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc40</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc41</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc42</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc43</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc44</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc45</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc46</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc47</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc48</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Doc49</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
       </property>
      </column>
      <column>
       <property name="text">
        <string>Doc50</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
      </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>60</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>70</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>80</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>11</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>In Which Document</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="TFIDF_Doc_comboBox">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>9</y>
+       <width>101</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="TFIDF_textEdit">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>260</y>
+       <width>761</width>
+       <height>191</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="TFIDFCompute_Button">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>10</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Execute</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/IR-System/resource/neurone.png</normaloff>:/IR-System/resource/neurone.png</iconset>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>13</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Method</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="TFIDF_Method_comboBox">
+     <property name="geometry">
+      <rect>
+       <x>64</x>
+       <y>10</y>
+       <width>171</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>Log-frequency weighting</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TF-IDF weighting</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="TFIDF_Formula_Label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>211</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources.qrc">:/IR-System/resource/Log-frequency weighting.PNG</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>12</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Rank</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="TFIDF_Rank_spinBox">
+     <property name="geometry">
+      <rect>
+       <x>375</x>
+       <y>9</y>
+       <width>51</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+     <property name="accelerated">
+      <bool>true</bool>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>5</number>
+     </property>
     </widget>
    </widget>
   </widget>
@@ -979,7 +1383,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Source Pattern</string>
+    <string>Training Pattern</string>
    </property>
   </widget>
   <widget class="QLabel" name="file_label_7">
@@ -1017,22 +1421,17 @@
    </item>
    <item>
     <property name="text">
-     <string>covid-19</string>
+     <string>market</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>oil</string>
+     <string>travel</string>
     </property>
    </item>
    <item>
     <property name="text">
      <string>variant</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>stock</string>
     </property>
    </item>
    <item>
@@ -1054,10 +1453,10 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>TF-IDF Computing</string>
+    <string>Weighting Computing</string>
    </property>
    <property name="checked">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
   </widget>
  </widget>

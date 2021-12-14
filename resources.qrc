@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="IR-System">
+    <file>resource/TFIDF weighting.png</file>
+    <file>resource/Log-frequency weighting.PNG</file>
+    <file>resource/neurone.png</file>
     <file>resource/IRSystem-icon.png</file>
     <file>resource/Stemming-icon.png</file>
     <file>resource/stopwords-icon.png</file>
