@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>661</width>
-    <height>601</height>
+    <width>779</width>
+    <height>638</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -30,7 +30,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>40</y>
+     <y>30</y>
      <width>341</width>
      <height>21</height>
     </rect>
@@ -66,12 +66,17 @@
      <string>Edit Distance</string>
     </property>
    </item>
+   <item>
+    <property name="text">
+     <string>Word2Vect</string>
+    </property>
+   </item>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>16</y>
+     <y>6</y>
      <width>291</width>
      <height>20</height>
     </rect>
@@ -84,20 +89,20 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>70</y>
-     <width>151</width>
+     <y>60</y>
+     <width>131</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Information Retrieval</string>
+    <string>Information Retrieval :</string>
    </property>
   </widget>
   <widget class="QProgressBar" name="file_progressBar">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>90</y>
+     <y>80</y>
      <width>381</width>
      <height>23</height>
     </rect>
@@ -106,48 +111,11 @@
     <number>24</number>
    </property>
   </widget>
-  <widget class="QTableWidget" name="Index_tableWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>140</y>
-     <width>641</width>
-     <height>301</height>
-    </rect>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Sunken</enum>
-   </property>
-   <column>
-    <property name="text">
-     <string>Word</string>
-    </property>
-    <property name="textAlignment">
-     <set>AlignLeading|AlignVCenter</set>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Document</string>
-    </property>
-    <property name="textAlignment">
-     <set>AlignLeading|AlignVCenter</set>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Rows</string>
-    </property>
-    <property name="textAlignment">
-     <set>AlignLeading|AlignVCenter</set>
-    </property>
-   </column>
-  </widget>
   <widget class="QSpinBox" name="file_spinBox">
    <property name="geometry">
     <rect>
      <x>560</x>
-     <y>40</y>
+     <y>30</y>
      <width>71</width>
      <height>22</height>
     </rect>
@@ -172,7 +140,7 @@
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>40</y>
+     <y>30</y>
      <width>90</width>
      <height>16</height>
     </rect>
@@ -185,7 +153,7 @@
    <property name="geometry">
     <rect>
      <x>510</x>
-     <y>90</y>
+     <y>80</y>
      <width>141</width>
      <height>20</height>
     </rect>
@@ -201,14 +169,14 @@
      <normaloff>:/IR-System/resource/Stemming-icon.png</normaloff>:/IR-System/resource/Stemming-icon.png</iconset>
    </property>
    <property name="checked">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QCheckBox" name="Stopwords_checkBox">
    <property name="geometry">
     <rect>
      <x>400</x>
-     <y>90</y>
+     <y>80</y>
      <width>101</width>
      <height>20</height>
     </rect>
@@ -237,94 +205,11 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="file_label_3">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>450</y>
-     <width>61</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Matching :</string>
-   </property>
-  </widget>
-  <widget class="QTableWidget" name="Match_tableWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>480</y>
-     <width>641</width>
-     <height>111</height>
-    </rect>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Sunken</enum>
-   </property>
-   <column>
-    <property name="text">
-     <string>Word</string>
-    </property>
-    <property name="textAlignment">
-     <set>AlignLeading|AlignVCenter</set>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Document</string>
-    </property>
-    <property name="textAlignment">
-     <set>AlignLeading|AlignVCenter</set>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Rows</string>
-    </property>
-    <property name="textAlignment">
-     <set>AlignLeading|AlignVCenter</set>
-    </property>
-   </column>
-  </widget>
-  <widget class="QLineEdit" name="Match_lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>450</y>
-     <width>161</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>COVID-19</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="search_pushButton">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>450</y>
-     <width>71</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Search</string>
-   </property>
-   <property name="icon">
-    <iconset resource="resources.qrc">
-     <normaloff>:/IR-System/resource/Search-icon.png</normaloff>:/IR-System/resource/Search-icon.png</iconset>
-   </property>
-  </widget>
   <widget class="QPushButton" name="perform_pushButton">
    <property name="geometry">
     <rect>
      <x>360</x>
-     <y>40</y>
+     <y>30</y>
      <width>81</width>
      <height>21</height>
     </rect>
@@ -337,32 +222,831 @@
      <normaloff>:/IR-System/resource/Play-icon.png</normaloff>:/IR-System/resource/Play-icon.png</iconset>
    </property>
   </widget>
-  <widget class="QCheckBox" name="Partial_checkBox">
+  <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>450</y>
-     <width>111</width>
+     <x>10</x>
+     <y>150</y>
+     <width>761</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="Zipf_tab">
+    <attribute name="title">
+     <string>Zipf Distribution</string>
+    </attribute>
+    <widget class="QTableWidget" name="Index_tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>741</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <column>
+      <property name="text">
+       <string>Word</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Document</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Rows</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+    </widget>
+    <widget class="QCheckBox" name="IgnoreCase_checkBox">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>310</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Ignore case</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/IR-System/resource/IgnoreCase-icon.png</normaloff>:/IR-System/resource/IgnoreCase-icon.png</iconset>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="file_label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>310</y>
+       <width>61</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Matching :</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="search_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>310</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/IR-System/resource/Search-icon.png</normaloff>:/IR-System/resource/Search-icon.png</iconset>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="Partial_checkBox">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>310</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Partial matching</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/IR-System/resource/PartialSearch-icon.png</normaloff>:/IR-System/resource/PartialSearch-icon.png</iconset>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Match_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>310</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>COVID-19</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="Match_tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>340</y>
+       <width>741</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <column>
+      <property name="text">
+       <string>Word</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Document</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Rows</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Word2Vect_tab">
+    <attribute name="title">
+     <string>Word2Vec</string>
+    </attribute>
+    <widget class="QTabWidget" name="Word2Vect_tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>741</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>CBOW Model</string>
+      </attribute>
+      <widget class="QLabel" name="file_label_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>13</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Training model</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="CBOW_tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>351</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <column>
+        <property name="text">
+         <string>Similarity word</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Score</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
+       </column>
+      </widget>
+      <widget class="QPushButton" name="CBOWCompute_Button">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>10</y>
+         <width>91</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Execute</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/IR-System/resource/neurone.png</normaloff>:/IR-System/resource/neurone.png</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="CBOWImage_label">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>40</y>
+         <width>361</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="TrainCBOWModel_comBox">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>10</y>
+         <width>191</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Skip-gram Model</string>
+      </attribute>
+      <widget class="QLabel" name="file_label_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>13</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Training model</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="Skipgram_tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>351</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <column>
+        <property name="text">
+         <string>Similarity word</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Score</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
+       </column>
+      </widget>
+      <widget class="QPushButton" name="SkipgramCompute_Button">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>10</y>
+         <width>91</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Execute</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/IR-System/resource/neurone.png</normaloff>:/IR-System/resource/neurone.png</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="SkipgramImage_label">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>40</y>
+         <width>361</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="TrainSkipgramModel_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>10</y>
+         <width>191</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <zorder>SkipgramImage_label</zorder>
+      <zorder>file_label_6</zorder>
+      <zorder>Skipgram_tableWidget</zorder>
+      <zorder>SkipgramCompute_Button</zorder>
+      <zorder>TrainSkipgramModel_comboBox</zorder>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="CostTime_Label">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>10</y>
+       <width>201</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>TF-IDF</string>
+    </attribute>
+    <widget class="QTableWidget" name="TFIDF_tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>751</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <column>
+      <property name="text">
+       <string>Word</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc1</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc2</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc3</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc4</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc5</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc6</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc7</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc8</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc9</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc10</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc11</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc12</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc13</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc14</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc15</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc16</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc17</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc18</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc19</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc20</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc21</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc22</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc23</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc24</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc25</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc26</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc27</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc28</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc29</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc30</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc31</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc32</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc33</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc34</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc35</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc36</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc37</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc38</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc39</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc40</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc41</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc42</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc43</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc44</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc45</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc46</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc47</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc48</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc49</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Doc50</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="Traindata_Button">
+   <property name="geometry">
+    <rect>
+     <x>325</x>
+     <y>115</y>
+     <width>21</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Traindata_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>116</y>
+     <width>191</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>Partial matching</string>
-   </property>
-   <property name="icon">
-    <iconset resource="resources.qrc">
-     <normaloff>:/IR-System/resource/PartialSearch-icon.png</normaloff>:/IR-System/resource/PartialSearch-icon.png</iconset>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
+    <string>D:\Training_CNBC_Data.txt</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="IgnoreCase_checkBox">
+  <widget class="QLabel" name="file_label_4">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>450</y>
-     <width>111</width>
+     <x>10</x>
+     <y>119</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Source Pattern</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="file_label_7">
+   <property name="geometry">
+    <rect>
+     <x>362</x>
+     <y>118</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Word : </string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="SimilarWord_comboBox">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>115</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="duplicatesEnabled">
+    <bool>false</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>omicron</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>covid-19</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>oil</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>variant</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>stock</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>covid</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QCheckBox" name="TFIDF_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>117</y>
+     <width>151</width>
      <height>20</height>
     </rect>
    </property>
@@ -370,27 +1054,10 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>Ignore case</string>
-   </property>
-   <property name="icon">
-    <iconset resource="resources.qrc">
-     <normaloff>:/IR-System/resource/IgnoreCase-icon.png</normaloff>:/IR-System/resource/IgnoreCase-icon.png</iconset>
+    <string>TF-IDF Computing</string>
    </property>
    <property name="checked">
     <bool>false</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>120</y>
-     <width>53</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Index</string>
    </property>
   </widget>
  </widget>

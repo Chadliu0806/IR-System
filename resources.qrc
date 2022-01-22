@@ -1,10 +1,27 @@
 <RCC>
   <qresource prefix="IR-System">
+    <file>resource/TFIDF-icon.png</file>
+    <file>resource/zipf.png</file>
+    <file>resource/Word2Vec.png</file>
+    <file>resource/Taiwan-Flag-icon.png</file>
+    <file>resource/Load-icon.png</file>
+    <file>resource/moderna-Logo.png</file>
+    <file>resource/AZ-Logo.jpg</file>
+    <file>resource/Pfizer-Logo.jpg</file>
+    <file>resource/China-Flag-icon.png</file>
+    <file>resource/Flag_of_Brazil.png</file>
+    <file>resource/India-Flag-icon.png</file>
+    <file>resource/United-Kingdom-flag-icon.png</file>
+    <file>resource/United-States-Flag-icon.png</file>
+    <file>resource/align-compact-icon.png</file>
+    <file>resource/Document-Microsoft-Excel-icon.png</file>
+    <file>resource/file-info-icon.png</file>
+    <file>resource/TFIDF weighting.png</file>
+    <file>resource/Log-frequency weighting.PNG</file>
+    <file>resource/neurone.png</file>
     <file>resource/IRSystem-icon.png</file>
     <file>resource/Stemming-icon.png</file>
     <file>resource/stopwords-icon.png</file>
-    <file>resource/PartialSearch-icon.png</file>
-    <file>resource/IgnoreCase-icon.png</file>
     <file>resource/Play-icon.png</file>
     <file>resource/Search-icon.png</file>
   </qresource>

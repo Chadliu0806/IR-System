@@ -62,6 +62,19 @@ class LinkedList:
                     current_node = current_node.next
             return -1
 
+    def getNodeSubjectCount(self, word):
+        if len(self) == 0 or word =='':
+            return 0
+        else:
+            current_node = self.head
+            while current_node != None:
+                if (current_node.word == word):
+                    subject = current_node.subject
+                    return len(subject.keys())
+                else:
+                    current_node = current_node.next
+            return 0
+
     def deleteAll(self):
         current_node = self.head
         previuos_node = current_node
