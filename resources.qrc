@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="IR-System">
+<<<<<<< HEAD
     <file>resource/TFIDF-icon.png</file>
     <file>resource/zipf.png</file>
     <file>resource/Word2Vec.png</file>
@@ -16,6 +17,8 @@
     <file>resource/align-compact-icon.png</file>
     <file>resource/Document-Microsoft-Excel-icon.png</file>
     <file>resource/file-info-icon.png</file>
+=======
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
     <file>resource/TFIDF weighting.png</file>
     <file>resource/Log-frequency weighting.PNG</file>
     <file>resource/neurone.png</file>

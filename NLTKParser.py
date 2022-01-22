@@ -34,6 +34,7 @@ from sklearn.preprocessing import normalize
 from sklearn.metrics.pairwise import cosine_similarity
 
 _list = LinkedList()
+<<<<<<< HEAD
 encode = 'ascii'
 All_tokens = []
 docs_list = []
@@ -45,6 +46,13 @@ class CWeight:
     tfidf = list()
     sorted_word = list()
     
+=======
+All_tokens = []
+encode = 'ascii'
+docs_list = []
+original_docs_list = []
+
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
 def listInit():
 
     global list
@@ -138,6 +146,7 @@ def edit_distance(filename):
 def Stemming(line):
 
     stemmer = PorterStemmer()   # Porter 法去除字尾 Stemming
+<<<<<<< HEAD
     
     stemming_string = ''
 
@@ -163,6 +172,34 @@ def getPattern(source, target, stopword=False, stemming=False):
     sr = set(stopwords.words('english'))
     
     new_stopwords = ['?', '$', '%', '\'s', 'would', 'n\'t', 'thi', 'wa',
+=======
+    
+    stemming_string = ''
+
+   # tokens = line.encode(encoding=encode, errors='ignore').split()
+    tokens = word_tokenize(line)
+    # Porter 法去除字尾 Stemming
+    for token in tokens:
+       # sz = token.decode(encode)
+        sz = token
+        sz_result = stemmer.stem(sz)
+        stemming_string = stemming_string + ' ' + sz_result
+    return stemming_string
+
+def Zipf_distribution(source, target=None, stopword=False, stemming=False, Indexing=False):
+    
+    global _list
+    global All_tokens
+
+    global docs_list
+    global original_docs_list
+    string_list = ''
+    original_string_list = ''
+    
+    sr = set(stopwords.words('english'))
+    
+    new_stopwords = ['?', '$', '%', '\'s', 'would', 'n\'t',
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
                      'about', 'again', 'al.', 'all', 'almost', 'also', 'although', 'always', 'among', 'an', 'and', 'another', 'any', 'are', 'as', 'at',
                      'be', 'because', 'been', 'before', 'being', 'between', 'both', 'but', 'by',
                      'can', 'could', 
@@ -186,9 +223,14 @@ def getPattern(source, target, stopword=False, stemming=False):
                      'was', 'we', 'were', 'what', 'when', 'where', 'whether', 'which', 'while', 'who', 'why', 'with', 'within', 'without'
                     ]
     sr = sr.union(new_stopwords)
+<<<<<<< HEAD
 
     head, tail = os.path.split(source)
 
+=======
+    head, tail = os.path.split(source)
+
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
     print(tail)
     with open(source, newline='', encoding='utf_8_sig') as csvfile:
         rows = csv.reader(csvfile, delimiter=',')
@@ -198,6 +240,7 @@ def getPattern(source, target, stopword=False, stemming=False):
                 Line = row[1]
                 if row[2] != '':
                     Line = Line + ' ' + row[2]
+<<<<<<< HEAD
                     
                     original_string_list += Line
                     
@@ -339,6 +382,8 @@ def Zipf_distribution(source, target=None, stopword=False, stemming=False, Index
                 original_title_list += row[1]
                 if row[2] != '':
                     Line = Line + ' ' + row[2]
+=======
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
                 
                 original_string_list += Line
                 transTable = Line.maketrans("(),.?", "     ", "\":")            
@@ -382,12 +427,19 @@ def Zipf_distribution(source, target=None, stopword=False, stemming=False, Index
     string_list += '\n'
     docs_list.append(string_list)
     original_docs_list.append(original_string_list)
+<<<<<<< HEAD
     original_docs_title_list.append(original_title_list)
     
     f = open(target, "a")
     f.write(string_list)
     f.close()
     
+=======
+    f = open(target, "a")
+    f.write(string_list)
+    f.close()
+
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
 
 
 def getQuery(ui, calculate=True, display=True):
@@ -629,6 +681,7 @@ def TFIDF_Weight(ui, word_list, query_operation ,method=0, bCalculate=True, bSho
     InitTFIDFTable(ui)
     InitInfoTable(ui)
 
+<<<<<<< HEAD
     if bCalculate == True:
         CWeight.tf.clear()
         CWeight.tfidf.clear()
@@ -798,6 +851,84 @@ def TFIDF_Weight(ui, word_list, query_operation ,method=0, bCalculate=True, bSho
         msgBox.setText('TF-IDF computing complete.') # Add message
         msgBox.setStandardButtons(QMessageBox.Ok)
         msgBox.exec()    
+=======
+    if 0:
+        w_list = []
+        w_list.append('omicron')
+        w_list.append('market')
+        w_list.append('travel')
+        w_list.append('variant')
+        w_list.append('covid')
+        w_list.append('restrict')
+    
+        for item in fdist:
+            word_string = item[0]
+            row = ui.Index_tableWidget.rowCount()
+            ui.Index_tableWidget.insertRow(row)
+            item = QTableWidgetItem(word_string)
+            item.setFlags(QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled)
+        
+            if word_string in w_list:
+                item.setCheckState(QtCore.Qt.Checked)    
+            else:
+                item.setCheckState(QtCore.Qt.Unchecked)
+            ui.Index_tableWidget.setItem(row, 0, item)
+    else:
+        w_list = []
+        w_list.append('oil')
+        w_list.append('covid')
+        w_list.append('omicron')
+        w_list.append('variant')
+        w_list.append('concern')
+        w_list.append('stock')
+
+        for word_string in w_list:
+            row = ui.Index_tableWidget.rowCount()
+            ui.Index_tableWidget.insertRow(row)
+            item = QTableWidgetItem(word_string)
+            item.setFlags(QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled)
+            item.setCheckState(QtCore.Qt.Checked)   
+            ui.Index_tableWidget.setItem(row, 0, item) 
+
+    """
+    with open('d:\\Index_Result.csv', 'w', encoding=encode, newline='') as f:
+        writer = csv.writer(f)
+        for item in fdist:
+            word_string = item[0]
+            
+            subject = _list.getNodedata(word_string)
+            if subject != None:
+                for key, val in subject.items():
+                    data = [word_string, key, val]
+                    writer.writerow(data)
+                    #out_sz = 'Word:['+word_string+'], '+'Doc:['+key+'], '+'Row:'+str(val) 
+                    row = ui.Index_tableWidget.rowCount()
+                    ui.Index_tableWidget.insertRow(row)
+                    ui.Index_tableWidget.setItem(row, 0, QTableWidgetItem(word_string))
+                    item = QTableWidgetItem(key)
+                    item.setForeground(QBrush(QColor(128, 0, 0)))
+                    ui.Index_tableWidget.setItem(row, 1, item)
+                    item = QTableWidgetItem(str(val))
+                    item.setForeground(QBrush(QColor(0, 0, 128)))
+                    ui.Index_tableWidget.setItem(row, 2, item)
+    """                
+    #plt.clf()
+    
+    
+    fig = plt.figure(figsize = (10,5))
+    plt.gcf().subplots_adjust(bottom=0.35) # to avoid x-ticks cut-off    
+    plt.ion()
+   
+    freq.plot(50, title='Top 50 Most Common Words in Corpus') #cumulative=False)
+    plt.ioff() 
+    plt.savefig('d:\\img_top50_common.png')
+    
+    pixmap = QPixmap('d:\\img_top50_common.png')
+    ui.Zipf_label.setPixmap(pixmap)
+    ui.Zipf_label.setScaledContents(True)
+    
+    
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
 
 def Matching(ui, filename, word, bPartial, bIgnoreCase):
 
@@ -841,6 +972,7 @@ def InitTFIDFTable(ui):
         label = 'Doc' + str(i+1)
         header_labels.append(label)
     ui.TFIDF_tableWidget.setHorizontalHeaderLabels(header_labels)
+<<<<<<< HEAD
     ui.TFIDF_textEdit.clear()
 
 def InitInfoTable(ui):
@@ -872,6 +1004,9 @@ def InitIndexTable(ui):
     ui.Index_tableWidget.horizontalHeader().resizeSection(1,100)
 
  
+=======
+  
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
     
 def CBOW_model(ui):
 
@@ -921,12 +1056,16 @@ def CBOW_model(ui):
     item = QTableWidgetItem(str(model.wv.similarity(sz, sz)))
     item.setForeground(QBrush(QColor(128, 0, 0)))
     ui.CBOW_tableWidget.setItem(row, 1, item)
+<<<<<<< HEAD
 
 
     nQuery = 0
     ui.Query_comboBox.clear() 
     ui.Query_comboBox.addItem('')
     ui.Query_comboBox.addItem('COVID-19')
+=======
+         
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
     for word_string, val in similar_list:
         row = ui.CBOW_tableWidget.rowCount()
         ui.CBOW_tableWidget.insertRow(row)
@@ -935,6 +1074,7 @@ def CBOW_model(ui):
         item.setForeground(QBrush(QColor(128, 0, 0)))
         ui.CBOW_tableWidget.setItem(row, 1, item)
 
+<<<<<<< HEAD
         if nQuery < 10:    
             Query_string = 'COVID-19' + ' ' + 'AND' + ' ' + word_string
             ui.Query_comboBox.addItem(Query_string)
@@ -944,6 +1084,10 @@ def CBOW_model(ui):
         v_list.append(model.wv.get_vector(word_string))
     ui.Query_comboBox.setCurrentIndex(0)
 
+=======
+        w_list.append(word_string)
+        v_list.append(model.wv.get_vector(word_string))
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
 
     pca = PCA(n_components=2)
     result = pca.fit_transform(v_list)
@@ -1040,7 +1184,11 @@ def Skipgram_model(ui):
     
     #plt.show()
 
+<<<<<<< HEAD
 def OpenTFIDFDocument(ui, w_list):
+=======
+def OpenDocument(ui, w_list):
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
     
     global original_docs_list
     text = str(ui.TFIDF_Doc_comboBox.currentText())
@@ -1067,6 +1215,7 @@ def OpenTFIDFDocument(ui, w_list):
                         html_string = html_string + '<font color=\"blue\">' + ' ' + str(word) + ' ' + '</font>'     
                     else:
                         html_string = html_string + '<font color=\"black\">' + ' ' + str(word) + ' ' + '</font>'      
+<<<<<<< HEAD
         ui.TFIDF_textEdit.setHtml(html_string)       
     
 
@@ -1104,6 +1253,269 @@ def OpenInfoDocument(ui, w_list, text):
 
 
 
+=======
+        ui.TFIDF_textEdit.setHtml(html_string)        
+
+
+def getPattern(source, target, stopword=False, stemming=False):       
+
+    global _list
+    global docs_list
+    global original_docs_list
+    string_list = ""
+    original_string_list = ""
+    
+    
+    sr = set(stopwords.words('english'))
+    
+    new_stopwords = ['?', '$', '%', '\'s', 'would', 'n\'t',
+                     'about', 'again', 'al.', 'all', 'almost', 'also', 'although', 'always', 'among', 'an', 'and', 'another', 'any', 'are', 'as', 'at',
+                     'be', 'because', 'been', 'before', 'being', 'between', 'both', 'but', 'by',
+                     'can', 'could', 
+                     'did', 'do', 'does', 'done', 'due', 'during',
+                     'e.g.', 'each', 'eight', 'either', 'enough', 'especially', 'et.', 'et al.', 'etc',
+                     'five', 'for', 'found', 'four', 'from', 'further',
+                     'had', 'has', 'have', 'having', 'here', 'how', 'however', 'hi',
+                     'i', 'i.e.', 'if', 'in', 'into', 'is', 'it', 'its', 'itself',
+                     'just',
+                     'kg', 'km',
+                     'made', 'mainly', 'make', 'may', 'mg', 'might', 'ml', 'mm', 'most', 'mostly', 'must',
+                     'nearly', 'neither', 'nine', 'no', 'nor', 'not',
+                     'obtained', 'of', 'often', 'on', 'one', 'or', 'our', 'overall',
+                     'perhaps',
+                     'quite',
+                     'rather', 'really', 'regarding',
+                     'seem', 'seen', 'seven', 'several', 'should', 'show', 'showed', 'shown', 'shows', 'significantly', 'since', 'six', 'so', 'some', 'such',
+                     'ten', 'than', 'that', 'the', 'their', 'theirs', 'them', 'then', 'there', 'therefore', 'these', 'they', 'this', 'those', 'three', 'through', 'thus', 'to', 'two',
+                     'upon', 'use', 'used', 'using',
+                     'various', 'very',
+                     'was', 'we', 'were', 'what', 'when', 'where', 'whether', 'which', 'while', 'who', 'why', 'with', 'within', 'without'
+                    ]
+    sr = sr.union(new_stopwords)
+
+    head, tail = os.path.split(source)
+
+    print(tail)
+    with open(source, newline='', encoding='utf_8_sig') as csvfile:
+        rows = csv.reader(csvfile, delimiter=',')
+        i = 0
+        for row in rows:
+            if i != 0:  
+                Line = row[1]
+                if row[2] != '':
+                    Line = Line + ' ' + row[2]
+                    
+                    original_string_list += Line
+                    
+                    transTable = Line.maketrans("(),.?", "     ", "\":")            
+                    Line = Line.translate(transTable)
+  
+                    # Porter 法去除字尾 Stemming
+                    if stemming == True:
+                        Line = Stemming(Line)  
+                
+                    tokens = Line.encode(encoding=encode, errors='ignore').split()
+                    clean_tokens = tokens[:]
+
+                    sz = ''
+                    if stopword == False:
+                        for token in tokens:    # 不移除停用詞但要處理 Indexing
+                            sz = token.decode(encode)
+                            if not sz.isdigit() and len(sz) >= 2:  # ignore digital number
+                                string_list += sz
+                                string_list += ' '
+                    else:
+                        for token in tokens:    # 移除停用詞Stop Words
+                            sz = token.decode(encode)
+                            if sz in sr:
+                                clean_tokens.remove(token)
+                            else:
+                                if not sz.isdigit() and len(sz) >= 2:  # ignore digital number
+                                    string_list += sz
+                                    string_list += ' '
+            i += 1
+    string_list += '\n'
+    docs_list.append(string_list)
+    original_docs_list.append(original_string_list)
+    f = open(target, "a")
+    f.write(string_list)
+    f.close()
+
+
+def TFIDF_Weight(ui, word_list, method=0):  
+
+    InitTFIDFTable(ui)
+
+    global docs_list
+    doc_all = [[word.lower() for word in doc.split() if len(word) >= 2] for doc in docs_list]
+
+    if method == 0:     # Log-frequency weighting
+        # TF
+        tf = dict()
+        for n in range(len(doc_all)):
+            for word in doc_all[n]:
+                if word not in tf: 
+                    tf[word] = [0 for _ in doc_all]     # Initial zero
+                # 詞彙在該文件中出現次數
+                total_sum = 0
+                for term in doc_all[n]:
+                    if term == word:
+                        total_sum = total_sum + 1
+                tf[word][n] = total_sum 
+
+        # weight
+        sorted_word = sorted(set([word for word in tf]))
+        tfidf = list()
+        
+        for word in sorted_word:
+            value = tf[word]
+            n = 0
+            for v in value:
+                if v > 0:
+                    value[n] = 1 + math.log10(v)
+                else:
+                    value[n] = 0
+                n = n + 1
+            tfidf.append(value)
+        #   tfidf = normalize(tfidf, norm='l2')
+        
+        """
+        f = []
+        tf = {}
+        idf = {}
+        D = len(doc_all)
+        avgdl = sum([len(doc)+ 0.0 for doc in doc_all]) / D
+        for doc in doc_all:
+            tmp = {}
+            for word in doc:
+                tmp[word] = tmp.get(word, 0) + 1
+            f.append(tmp)
+            for k in tmp.keys():
+                tf[k] = tf.get(k, 0) + 1
+        for k, v in tf.items():
+            idf[k] = math.log(D - v + 0.5) - math.log(v + 0.5)
+        # D, avgdl
+     
+       """
+        array = cosine_similarity(tfidf, tfidf)
+        f = open('d:\\123.txt', 'a')
+
+        for i in range(10):
+            f.write(str(array[i]))
+        f.close()
+
+    else: # TF-IDF weighting
+        # TF
+        tf = dict()
+        for n in range(len(doc_all)):
+            for word in doc_all[n]:
+                if word not in tf: 
+                    tf[word] = [0 for _ in doc_all]     # Initial zero
+                # 分子為詞彙在該文件中出現次數
+                # 分母則為該文件中所有詞彙數
+                total_sum = 0
+                for term in doc_all[n]:
+                    if term == word:
+                        total_sum = total_sum + 1
+
+                tf[word][n] = total_sum/len(doc_all[n])  
+                #tf[word][n] = sum([1 for term in doc_all[n] if term == word])/len(doc_all[n])  
+
+        # IDF
+        total_D = len(doc_all)
+        idf = dict()
+        for doc in doc_all:
+            for word in doc:
+                if word not in idf:
+                    # word_idf = math.log10(total_D/(sum([1 for doc in doc_all if word in doc])+1))
+                    total_sum = 1
+                    for doc in doc_all:
+                        if word in doc:
+                            total_sum = total_sum + 1
+                    # 分子為所有文件數量
+                    # 分母為包含該詞彙的文件數量
+                    word_idf = math.log10(total_D/total_sum)    
+                    idf[word] = word_idf
+
+        # TF_IDF : Weight
+        sorted_word = sorted(set([word for word in tf]))
+        tfidf = list()
+        
+        for word in sorted_word:
+            value = tf[word]
+            value = [v*idf[word] for v in value]
+            tfidf.append(value)
+        tfidf = normalize(tfidf, norm='l2')
+       
+        ### cosine_similarity 餘弦相似性
+        ### cosine_similarity(tfidf[i:i+1], tfidf)[0] 第i篇與全部文章比較相似性
+        ### cosine_similarity(tfIdf, tfIdf) ---> 全部文章交叉比較相似性
+
+        """
+        array = cosine_similarity(tfidf, tfidf)
+        f = open('d:\\123.txt', 'a')
+
+        for i in range(10):
+            f.write(str(array[i]))
+        f.close()
+        #print(array)
+        """
+        
+        """
+        # TF-IDF
+        vectorizer = TfidfVectorizer(smooth_idf=True)
+        tfidf = vectorizer.fit_transform(docs_list)
+        cols = vectorizer.get_feature_names_out()
+        weight = tfidf.toarray()              # tfidf array to Doc-1 ~ Doc-n
+        result = pd.DataFrame(tfidf.toarray(), columns=vectorizer.get_feature_names_out())
+        # print(pd.DataFrame(results).transpose())    
+        #print(result)
+    
+        """
+       
+
+    results = dict()
+    doc_rank = []    
+        
+    for col in range(len(tfidf[0])):
+        doc_rank.append(0)
+                
+    for top_Word in word_list:
+        row = ui.TFIDF_tableWidget.rowCount()
+        ui.TFIDF_tableWidget.insertRow(row)
+        item = QTableWidgetItem(top_Word)
+        ui.TFIDF_tableWidget.setItem(row, 0, item)
+        for n in range(len(sorted_word)):
+            results[sorted_word[n]] = tfidf[n]
+            if sorted_word[n] == top_Word:
+                for col in range(len(tfidf[n])):
+                    item = QTableWidgetItem(str(round(tfidf[n][col],5)))
+                    if tfidf[n][col] > 0:
+                        doc_rank[col] = doc_rank[col] + 1
+                    item.setForeground(QBrush(QColor(0, 0, 128)))
+                    ui.TFIDF_tableWidget.setItem(row, col+1, item)
+    
+    weight_count = []
+    for n in range(len(sorted_word)):
+        weight_count.append(0)
+        weight_count[n] = 0
+        for w in range(len(results[sorted_word[n]])):
+            weight_count[n] = weight_count[n] + results[sorted_word[n]][w]
+            
+    ui.TFIDF_Doc_comboBox.clear()
+    
+    for n in range(len(doc_rank)):
+        if doc_rank[n] >= len(word_list):
+            print('Doc' + str(n+1) +  ':' + str(doc_rank[n]))
+            ui.TFIDF_Doc_comboBox.addItem(str(n+1))
+    
+    msgBox = QMessageBox() 
+    msgBox.setIcon(QMessageBox.Information) # add "information" icon
+    msgBox.setWindowTitle('TF-IDF')
+    msgBox.setText('TF-IDF computing complete.') # Add message
+    msgBox.setStandardButtons(QMessageBox.Ok)
+    msgBox.exec()
+>>>>>>> ed31681a6c7ac452d7838273ee29617057d7a3d2
 
     
     

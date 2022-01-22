@@ -1,0 +1,12 @@
+
+.qt_for_python/rcc/resources.py
+.qt_for_python/uic/mainwidget.py
+__pycache__/LinkList.cpython-39.pyc
+__pycache__/MainWindow.cpython-39.pyc
+__pycache__/NLTKParser.cpython-39.pyc
+__pycache__/resources_rc.cpython-39.pyc
+IRSystem.py
+mainwidget.ui
+NLTKParser.py
+resources.qrc
+resources_rc.py
